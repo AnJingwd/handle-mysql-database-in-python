@@ -82,3 +82,6 @@
 - add_list_back_quote(mylist)： 在列表的每个元素两端增加``符号
 
 
+# 小结：
+
+以上封装的基本函数可以完成绝大多数使用mysql的常规操作，更加复杂的命令可以直接构建sql语句，使用上述的execute_sql(sql,cursor_obj,Return="no")语句在python里运行。
