@@ -65,7 +65,7 @@
 
 
 
-# 第四类：多表的连接操作函数
+## 第四类：多表的连接操作函数
 
 - union_tables(table_name_list,table_name,cursor_obj,type,action="execute")： 对table_name_list内相同结构的表格，通过type指定连接类型，连接类型包括union all 或者union连接，返回新的表table_name
 
@@ -73,12 +73,7 @@
 
 
 
-
-
-
-
-
-## 第四类：sql_function.py模块内使用的函数
+## 第五类：sql_function.py模块内使用的函数
 
 - get_line_context(file_path, row)：    获取txt文本指定行的内容
 
