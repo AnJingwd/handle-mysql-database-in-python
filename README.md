@@ -53,15 +53,23 @@
 
 - get_table_columns_name(table_name,cursor_obj,action="execute")： 获取某个表的列名，返回列表
 
+- rename_columns(table_name,origin_name_list,new_name_list,cursor_obj,action="execute")： 更改某个表某些列名，需要更改的列名以origin_name_list列表指定，新的列名以new_name_list指定
+
 - get_one_column_dataType(table_name,cursor_obj,column_name,action="execute")： 获取mysql表格某列的mysql数据类型
 
 - remove_repetitive_rows(table_name,column_name,table_name_new,columns_list,cursor_obj,action="execute")： 根据某列column_name去除mysql表的重复数据行，columns_list指定输出的新表
+
+- count_num(table_name,condition,cursor_obj,action='execute')： 根据条件查询某个域记录的数量
+
+- truncate_tables(tables_list,cursor_obj,action='execute')： 删除tables_list指定的mysql表名的列表
 
 
 
 # 第四类：多表的连接操作函数
 
 - union_tables(table_name_list,table_name,cursor_obj,type,action="execute")： 对table_name_list内相同结构的表格，通过type指定连接类型，连接类型包括union all 或者union连接，返回新的表table_name
+
+- join_tables(join_type,table_name1,table_name2,table_name_new,column_name1,column_name2,columns1,columns2,cursor_obj,action="execute")： 对表table_name1和table_name2根据join_type指定的连接类型进行连接，两表连接的条件列为column_name1和column_name2，参数columns1和columns2指定连接后分别保留原表的
 
 
 
@@ -73,5 +81,9 @@
 ## 第四类：sql_function.py模块内使用的函数
 
 - get_line_context(file_path, row)：    获取txt文本指定行的内容
+
+- add_prefix_str_list(prefix, mylist,type="list")： 在列表的每个元素前增加prefix前缀
+
+- add_list_back_quote(mylist)： 在列表的每个元素两端增加``符号
 
 
